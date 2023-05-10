@@ -1,0 +1,26 @@
+type Blog {
+    id : String
+    title : String
+    content : String
+    category : String
+    author : String
+    date : String
+}
+
+type Mutation {
+
+    createBlog(title:String, content:String, category:String, author:String, date:String) : Blog
+
+    deleteBlog(id:String) : String
+
+}
+
+type Query {
+
+    checkConnection : String
+
+    getBlogById(id : String) : Blog
+
+    getBlogs : [Blog]
+
+}
